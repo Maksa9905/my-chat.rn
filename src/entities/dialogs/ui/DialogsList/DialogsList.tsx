@@ -1,7 +1,6 @@
-import { ScrollView, View } from 'react-native'
+import { ScrollView } from 'react-native'
 import DialogsListItem from './DialogsListItem'
-import { formatDate } from '../lib/formatDate'
-import DialogsEmpty from './DialogsEmpty'
+import DialogsEmpty from '../DialogEmpty/DialogsEmpty'
 
 const testDialogs: Dialog[] = [
   {

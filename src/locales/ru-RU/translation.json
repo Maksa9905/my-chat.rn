@@ -17,6 +17,8 @@
   "startChattingNow": "Начните общаться прямо сейчас",
   "createDialog": "Создать диалог",
 
+  "searchDialog": "Поиск по имени",
+
   "formatDateMonth": "Месяц",
   "formatDateMonth_0": "января",
   "formatDateMonth_1": "февраля",

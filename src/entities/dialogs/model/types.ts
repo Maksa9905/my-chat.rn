@@ -9,3 +9,9 @@ type Dialog = {
   read: boolean
   isMyMessage: boolean
 }
+
+type NewDialog = {
+  id: string
+  username: string
+  avatarUrl: string
+}

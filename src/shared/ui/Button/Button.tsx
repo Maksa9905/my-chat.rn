@@ -30,7 +30,7 @@ const Button = ({
       style={styles.containerStyles}
       onPress={onClick}
     >
-      <Text style={styles.titleStyles}>{title}</Text>
+      {title && <Text style={styles.titleStyles}>{title}</Text>}
       {Icon && <Icon />}
     </Pressable>
   )

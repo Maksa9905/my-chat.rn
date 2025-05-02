@@ -1,2 +1,5 @@
-export { default as DialogsHeader } from './ui/DialogsHeader'
-export { default as DialogsList } from './ui/DialogsList'
+export { default as DialogsHeader } from './ui/DialogsHeader/DialogsHeader'
+export { default as DialogsList } from './ui/DialogsList/DialogsList'
+export { default as FindDialogsList } from './ui/FindDialogsList/FindDialogList'
+export { default as FindDialogTextField } from './ui/FindDIalogTextField'
+export { FindDialogsHeader } from './ui/FindDialogsHeader'

@@ -17,6 +17,8 @@
   "startChattingNow": "Send your first message!",
   "createDialog": "Create dialog",
 
+  "searchDialog": "Search by name",
+
   "formatDateMonth": "Month",
   "formatDateMonth_0": "January",
   "formatDateMonth_1": "February",
