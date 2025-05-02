@@ -46,7 +46,6 @@ const mediumSizeStyles = StyleSheet.create({
 
 const defaultStyles = StyleSheet.create({
   buttonContainer: {
-    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
@@ -56,9 +55,17 @@ const defaultStyles = StyleSheet.create({
   },
 })
 
+const fullWidthStyles = StyleSheet.create({
+  buttonContainer: {
+    width: '100%',
+  },
+  title: {},
+})
+
 export const getButtonStyles = (
   size: 'small' | 'medium',
   variant: 'outlined' | 'filled' | 'text',
+  fullWidth?: boolean,
 ) => {
   let containerStyles = defaultStyles.buttonContainer
   let titleStyles = defaultStyles.title
@@ -108,6 +115,13 @@ export const getButtonStyles = (
         ...titleStyles,
         ...textStyles.title,
       }
+  }
+
+  if (fullWidth) {
+    containerStyles = {
+      ...containerStyles,
+      ...fullWidthStyles.buttonContainer,
+    }
   }
 
   return { containerStyles, titleStyles }

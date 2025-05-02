@@ -10,5 +10,24 @@
   "whatsYourName": "What's your name?",
   "createUsername": "Create username",
   "repeatPassword": "Repeat password",
-  "signUp": "Sign Up"
+  "signUp": "Sign Up",
+
+  "dialogs": "Dialogs",
+  "dialogsEmpty": "No conversations yet",
+  "startChattingNow": "Send your first message!",
+  "createDialog": "Create dialog",
+
+  "formatDateMonth": "Month",
+  "formatDateMonth_0": "January",
+  "formatDateMonth_1": "February",
+  "formatDateMonth_2": "March",
+  "formatDateMonth_3": "April",
+  "formatDateMonth_4": "May",
+  "formatDateMonth_5": "June",
+  "formatDateMonth_6": "July",
+  "formatDateMonth_7": "August",
+  "formatDateMonth_8": "September",
+  "formatDateMonth_9": "October",
+  "formatDateMonth_10": "November",
+  "formatDateMonth_11": "December"
 }

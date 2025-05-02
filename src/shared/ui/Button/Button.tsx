@@ -1,7 +1,8 @@
 import { $theme } from '@/src/theme'
-import { useMemo } from 'react'
+import { ReactNode, useMemo } from 'react'
 import { Pressable, StyleSheet, Text } from 'react-native'
 import { getButtonStyles } from './Button.styles'
+import { DefaultIconProps } from '@/src/shared/model'
 
 export type ButtonProps = {
   title: string
@@ -9,6 +10,8 @@ export type ButtonProps = {
   variant?: 'outlined' | 'filled' | 'text'
   size?: 'small' | 'medium'
   disabled?: boolean
+  icon?: (props: DefaultIconProps) => ReactNode
+  fullWidth?: boolean
 }
 
 const Button = ({
@@ -17,8 +20,10 @@ const Button = ({
   variant = 'filled',
   size = 'small',
   disabled = false,
+  icon: Icon,
+  fullWidth,
 }: ButtonProps) => {
-  const styles = getButtonStyles(size, variant)
+  const styles = getButtonStyles(size, variant, fullWidth)
 
   return (
     <Pressable
@@ -26,6 +31,7 @@ const Button = ({
       onPress={onClick}
     >
       <Text style={styles.titleStyles}>{title}</Text>
+      {Icon && <Icon />}
     </Pressable>
   )
 }

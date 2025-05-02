@@ -26,11 +26,13 @@ const LoginForm = () => {
       <PasswordTextField />
       <View style={styles.buttons}>
         <Button
+          fullWidth
           onClick={() => {}}
           title={t('login')}
         />
         <Button
           variant="text"
+          fullWidth
           onClick={() => router.push('/welcome/register')}
           title={t('forgotPassword')}
         />

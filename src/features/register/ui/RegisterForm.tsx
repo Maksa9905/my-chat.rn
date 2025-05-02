@@ -30,10 +30,12 @@ const RegisterForm = () => {
       <RepeatedPasswordTextField />
       <View style={styles.buttons}>
         <Button
+          fullWidth
           onClick={() => {}}
           title={t('signUp')}
         />
         <Button
+          fullWidth
           variant="text"
           onClick={() => router.push('/welcome/login')}
           title={t('haveAccount')}

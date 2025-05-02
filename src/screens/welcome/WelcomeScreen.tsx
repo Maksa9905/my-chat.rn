@@ -31,10 +31,12 @@ const WelcomeScreen = () => {
       />
       <View style={styles.buttons}>
         <Button
+          fullWidth
           onClick={() => router.push('/welcome/login')}
           title={t('startChatting')}
         />
         <Button
+          fullWidth
           onClick={() => router.push('/welcome/register')}
           variant="text"
           title={t('haveAccount')}

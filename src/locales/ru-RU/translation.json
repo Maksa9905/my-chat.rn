@@ -10,5 +10,24 @@
   "whatsYourName": "Как вас зовут?",
   "createUsername": "Придумайте логин",
   "repeatPassword": "Повторите пароль",
-  "signUp": "Зарегистрироваться"
+  "signUp": "Зарегистрироваться",
+
+  "dialogs": "Диалоги",
+  "dialogsEmpty": "В диалогах пока что пусто",
+  "startChattingNow": "Начните общаться прямо сейчас",
+  "createDialog": "Создать диалог",
+
+  "formatDateMonth": "Месяц",
+  "formatDateMonth_0": "января",
+  "formatDateMonth_1": "февраля",
+  "formatDateMonth_2": "марта",
+  "formatDateMonth_3": "апреля",
+  "formatDateMonth_4": "мая",
+  "formatDateMonth_5": "июня",
+  "formatDateMonth_6": "июля",
+  "formatDateMonth_7": "августа",
+  "formatDateMonth_8": "сентября",
+  "formatDateMonth_9": "октября",
+  "formatDateMonth_10": "ноября",
+  "formatDateMonth_11": "декабря"
 }
