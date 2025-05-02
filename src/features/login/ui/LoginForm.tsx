@@ -1,8 +1,9 @@
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import LoginTextField from './LoginTextField'
 import PasswordTextField from './PasswordTextField'
 import { Button } from '@/src/shared/ui'
 import { useRouter } from 'expo-router'
+import { useTranslation } from 'react-i18next'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,6 +18,8 @@ const styles = StyleSheet.create({
 const LoginForm = () => {
   const router = useRouter()
 
+  const { t } = useTranslation()
+
   return (
     <View style={styles.container}>
       <LoginTextField />
@@ -24,12 +27,12 @@ const LoginForm = () => {
       <View style={styles.buttons}>
         <Button
           onClick={() => {}}
-          title="Войти"
+          title={t('login')}
         />
         <Button
           variant="text"
           onClick={() => router.push('/welcome/register')}
-          title="Нет аккаунта или забыли пароль?"
+          title={t('forgotPassword')}
         />
       </View>
     </View>

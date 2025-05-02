@@ -1,0 +1,14 @@
+{
+  "login": "Login",
+  "forgotPassword": "Don't have an account or forgot your password?",
+  "welcome": "Welcome to ",
+  "myChat": "MyChat",
+  "enterPassword": "Enter password",
+  "enterLogin": "Enter login",
+  "startChatting": "Start chatting",
+  "haveAccount": "I already have an account",
+  "whatsYourName": "What's your name?",
+  "createUsername": "Create username",
+  "repeatPassword": "Repeat password",
+  "signUp": "Sign Up"
+}

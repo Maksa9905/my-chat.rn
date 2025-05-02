@@ -1,0 +1,14 @@
+{
+  "login": "Войти",
+  "forgotPassword": "Нет аккаунта или забыли пароль?",
+  "welcome": "Добро пожаловать в ",
+  "myChat": "Мои Чаты",
+  "enterPassword": "Введите пароль",
+  "enterLogin": "Введите логин",
+  "startChatting": "Начать общаться",
+  "haveAccount": "Уже есть аккаунт?",
+  "whatsYourName": "Как вас зовут?",
+  "createUsername": "Придумайте логин",
+  "repeatPassword": "Повторите пароль",
+  "signUp": "Зарегистрироваться"
+}

@@ -5,6 +5,7 @@ import PasswordTextField from './PasswordTextField'
 import RepeatedPasswordTextField from './RepeatedPasswordTextField'
 import { Button } from '@/src/shared/ui'
 import { useRouter } from 'expo-router'
+import { useTranslation } from 'react-i18next'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,6 +18,8 @@ const styles = StyleSheet.create({
 })
 
 const RegisterForm = () => {
+  const { t } = useTranslation()
+
   const router = useRouter()
 
   return (
@@ -28,12 +31,12 @@ const RegisterForm = () => {
       <View style={styles.buttons}>
         <Button
           onClick={() => {}}
-          title="Зарегистрироваться"
+          title={t('signUp')}
         />
         <Button
           variant="text"
           onClick={() => router.push('/welcome/login')}
-          title="Уже есть аккаунт?"
+          title={t('haveAccount')}
         />
       </View>
     </View>

@@ -3,6 +3,7 @@ import { Image, StyleSheet, View } from 'react-native'
 import greetingsImage from '@/assets/images/welcome-page-image.png'
 import { Button } from '@/src/shared/ui'
 import { useRouter } from 'expo-router'
+import { useTranslation } from 'react-i18next'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,6 +18,8 @@ const styles = StyleSheet.create({
 })
 
 const WelcomeScreen = () => {
+  const { t } = useTranslation()
+
   const router = useRouter()
 
   return (
@@ -29,12 +32,12 @@ const WelcomeScreen = () => {
       <View style={styles.buttons}>
         <Button
           onClick={() => router.push('/welcome/login')}
-          title={'Начать общаться'}
+          title={t('startChatting')}
         />
         <Button
           onClick={() => router.push('/welcome/register')}
           variant="text"
-          title={'Уже есть аккаунт?'}
+          title={t('haveAccount')}
         />
       </View>
     </View>

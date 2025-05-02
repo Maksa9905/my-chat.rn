@@ -1,4 +1,5 @@
 import { $theme } from '@/src/theme'
+import { useTranslation } from 'react-i18next'
 import { StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -18,10 +19,12 @@ const styles = StyleSheet.create({
 })
 
 const GreetingsTitle = () => {
+  const { t } = useTranslation()
+
   return (
     <View style={styles.container}>
       <Text style={styles.greetings}>
-        Добро пожаловать в <Text style={styles.myChat}>Мои Чаты</Text>
+        {t('welcome')} <Text style={styles.myChat}>{t('myChat')}</Text>
       </Text>
     </View>
   )

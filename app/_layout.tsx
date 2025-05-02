@@ -1,5 +1,7 @@
-import { Link, Redirect, Slot, Tabs } from 'expo-router'
-import { SafeAreaView, Text, View } from 'react-native'
+import { Slot } from 'expo-router'
+import { View } from 'react-native'
+
+import '@/src/18n.ts'
 
 export default function RootLayout() {
   const isAuthorized = false
