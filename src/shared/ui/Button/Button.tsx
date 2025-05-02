@@ -1,6 +1,5 @@
-import { $theme } from '@/src/theme'
-import { ReactNode, useMemo } from 'react'
-import { Pressable, StyleSheet, Text } from 'react-native'
+import { ReactNode } from 'react'
+import { Pressable, Text } from 'react-native'
 import { getButtonStyles } from './Button.styles'
 import { DefaultIconProps } from '@/src/shared/model'
 

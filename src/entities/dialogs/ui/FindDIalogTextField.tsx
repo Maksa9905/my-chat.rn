@@ -13,7 +13,7 @@ const FindDialogTextField = () => {
       label={t('searchDialog')}
       value={search}
       onChange={changeSearchTextField}
-      type="search"
+      type="filled"
     />
   )
 }

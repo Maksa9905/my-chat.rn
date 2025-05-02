@@ -19,6 +19,11 @@
 
   "searchDialog": "Search by name",
 
+  "onlineStatus_online": "Online",
+  "onlineStatus_offline": "Offline",
+
+  "enterMessage": "Enter your message",
+
   "formatDateMonth": "Month",
   "formatDateMonth_0": "January",
   "formatDateMonth_1": "February",

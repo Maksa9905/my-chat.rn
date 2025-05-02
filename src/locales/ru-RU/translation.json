@@ -19,6 +19,11 @@
 
   "searchDialog": "Поиск по имени",
 
+  "onlineStatus_online": "В сети",
+  "onlineStatus_offline": "Не в сети",
+
+  "enterMessage": "Введите сообщение",
+
   "formatDateMonth": "Месяц",
   "formatDateMonth_0": "января",
   "formatDateMonth_1": "февраля",

@@ -3,8 +3,14 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   input: {
+    position: 'relative',
     height: 47,
     paddingLeft: 12,
+  },
+  iconContainer: {
+    position: 'absolute',
+    right: 16,
+    top: 4,
   },
 })
 
@@ -19,17 +25,18 @@ const inputStyles = StyleSheet.create({
 const searchStyles = StyleSheet.create({
   input: {
     borderRadius: 50,
-    backgroundColor: $theme.getState().common.neutral[30],
+    backgroundColor: $theme.getState().common.neutral[20],
   },
 })
 
-export const getTextFieldStyles = (type: 'input' | 'search') => {
-  if (type === 'input')
+export const getTextFieldStyles = (type: 'filled' | 'outlined') => {
+  if (type === 'outlined')
     return {
       input: {
         ...styles.input,
         ...inputStyles.input,
       },
+      iconContainer: styles.iconContainer,
     }
 
   return {
@@ -37,5 +44,6 @@ export const getTextFieldStyles = (type: 'input' | 'search') => {
       ...styles.input,
       ...searchStyles.input,
     },
+    iconContainer: styles.iconContainer,
   }
 }

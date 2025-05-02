@@ -1,10 +1,11 @@
 import { NotReadIcon, ReadIcon } from '@/src/shared/icons'
 import { $theme } from '@/src/theme'
 import { useMemo } from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import { MAX_MESSAGE_LENGTH } from '../../lib/constants'
 import { formatDate } from '../../lib/formatDate'
 import { getDialogsListItemStyles } from './DialogsListItem.styles'
+import { useRouter } from 'expo-router'
 
 const DialogsListItem = ({
   isMyMessage,
@@ -14,8 +15,11 @@ const DialogsListItem = ({
   unreadMessagesCount,
   username,
   datetime,
+  id,
 }: Dialog) => {
   const styles = getDialogsListItemStyles()
+
+  const router = useRouter()
 
   const readStatusIcon = useMemo(() => {
     if (!isMyMessage) return
@@ -32,7 +36,10 @@ const DialogsListItem = ({
   }, [lastMessage])
 
   return (
-    <View style={styles.container}>
+    <Pressable
+      onPress={() => router.push(`/dialogs/${id}`)}
+      style={styles.container}
+    >
       <Image
         width={58}
         height={58}
@@ -58,7 +65,7 @@ const DialogsListItem = ({
           )}
         </View>
       </View>
-    </View>
+    </Pressable>
   )
 }
 

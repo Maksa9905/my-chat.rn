@@ -1,8 +1,4 @@
-import {
-  FindDialogsHeader,
-  FindDialogsList,
-  FindDialogTextField,
-} from '@/src/entities/dialogs'
+import { FindDialogsHeader, FindDialogsList } from '@/src/entities/dialogs'
 import { View } from 'react-native'
 
 const NewDialogScreen = () => {
