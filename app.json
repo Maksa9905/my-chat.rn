@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.maksa9905.mychat"
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +34,26 @@
           "backgroundColor": "#ffffff"
         }
       ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+        }
+      ],
       "expo-localization"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "755ddd99-9920-42f6-a2dd-a056ccb488c0"
+      }
+    },
+    "owner": "maksa9905"
   }
 }

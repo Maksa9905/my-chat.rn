@@ -4,6 +4,9 @@ import PasswordTextField from './PasswordTextField'
 import { Button } from '@/src/shared/ui'
 import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
+import { submitLoginForm } from '../model/model'
+import { useUnit } from 'effector-react'
+import { loginMutation } from '../api/api'
 
 const styles = StyleSheet.create({
   container: {
@@ -20,6 +23,8 @@ const LoginForm = () => {
 
   const { t } = useTranslation()
 
+  const { pending } = useUnit(loginMutation)
+
   return (
     <View style={styles.container}>
       <LoginTextField />
@@ -27,8 +32,9 @@ const LoginForm = () => {
       <View style={styles.buttons}>
         <Button
           fullWidth
-          onClick={() => {}}
+          onClick={submitLoginForm}
           title={t('login')}
+          loading={pending}
         />
         <Button
           variant="text"

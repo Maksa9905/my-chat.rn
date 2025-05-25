@@ -1,15 +1,16 @@
-import { $theme } from '@/src/theme'
+import { $theme } from '@/src/application/theme'
 import { StyleSheet, TextInput, TextInputBase, View } from 'react-native'
 import { getTextFieldStyles } from './TextField.styles'
 import IconButton from '../IconButton/IconButton'
 import { ReactNode } from 'react'
+import { DefaultIconProps } from '../../model'
 
 type TextFieldProps = {
   label: string
   value: string
   onChange: (value: string) => void
   type?: 'outlined' | 'filled'
-  icon?: () => ReactNode
+  icon?: (props: unknown & DefaultIconProps) => ReactNode
   onClickIcon?: () => void
 }
 

@@ -1,4 +1,4 @@
-import { $theme } from '@/src/theme'
+import { $theme } from '@/src/application/theme'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
@@ -11,5 +11,7 @@ export const styles = StyleSheet.create({
   },
   messageList: {
     gap: 8,
+    flexDirection: 'column-reverse',
+    paddingVertical: 32,
   },
 })

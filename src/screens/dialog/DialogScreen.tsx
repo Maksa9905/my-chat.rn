@@ -1,7 +1,5 @@
 import { Chat } from '@/src/entities/chat'
 import { ChatHeader, ChatInput } from '@/src/entities/chat'
-import { PlusIcon, SendIcon } from '@/src/shared/icons'
-import { TextField } from '@/src/shared/ui'
 import { View } from 'react-native'
 import { styles } from './DialogScreen.styles'
 

@@ -24,6 +24,10 @@
 
   "enterMessage": "Enter your message",
 
+  "error": "Error",
+  "loginError_401": "Invalid credentials",
+  "signUpError_500": "Error during registration",
+
   "formatDateMonth": "Month",
   "formatDateMonth_0": "January",
   "formatDateMonth_1": "February",

@@ -1,4 +1,4 @@
-import { $theme } from '@/src/theme'
+import { $theme } from '@/src/application/theme'
 import { useTranslation } from 'react-i18next'
 import { StyleSheet, Text, View } from 'react-native'
 

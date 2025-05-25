@@ -1,4 +1,4 @@
-import { $theme } from '@/src/theme'
+import { $theme } from '@/src/application/theme'
 import { StyleSheet } from 'react-native'
 
 export const getFindDialogItemStyles = () =>

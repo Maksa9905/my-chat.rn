@@ -1,5 +1,6 @@
 import { ScrollView } from 'react-native'
 import FindDialogListItem from './FindDialogListItem'
+import { useUnit } from 'effector-react'
 
 const testDialogs: NewDialog[] = [
   {

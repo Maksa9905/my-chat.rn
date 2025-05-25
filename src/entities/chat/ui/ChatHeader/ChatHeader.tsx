@@ -3,19 +3,33 @@ import { styles } from './ChatHeader.styles'
 import { useTranslation } from 'react-i18next'
 import { IconButton } from '@/src/shared/ui'
 import { ArrowListIcon } from '@/src/shared/icons'
-import { useRouter } from 'expo-router'
+import { useLocalSearchParams, useRouter } from 'expo-router'
+import { useUnit } from 'effector-react'
+import { getDialogById } from '../../api/api'
+import { useEffect, useMemo } from 'react'
+import { getProfileQuery } from '@/src/entities/users'
 
 const ChatHeader = () => {
   const { t } = useTranslation()
+  const { id } = useLocalSearchParams<{ id: string }>()
+
+  const { data: dialogData, start: getDialogData } = useUnit(getDialogById)
+  const { data: myInfoData, start: getMyInfo } = useUnit(getProfileQuery)
+
+  useEffect(() => {
+    getDialogData(id)
+    getMyInfo()
+  }, [])
+
+  const username = useMemo(
+    () =>
+      dialogData?.data.participants.find(
+        (member) => member.id !== myInfoData?.data.id,
+      )?.username || '',
+    [dialogData],
+  )
 
   const router = useRouter()
-
-  const avatarUrl =
-    'https://i.pinimg.com/originals/b3/b0/0a/b3b00ae0d7fc63c8b716d1c3c58e461e.jpg'
-
-  const username = 'Мария Какая-то там'
-
-  const onlineStatus = 'online'
 
   return (
     <View style={styles.container}>
@@ -27,12 +41,14 @@ const ChatHeader = () => {
         style={styles.image}
         width={58}
         height={58}
-        source={{ uri: avatarUrl }}
+        source={{
+          uri: 'https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg',
+        }}
       />
       <View style={styles.usernameContainer}>
-        <Text style={styles.username}>{username}</Text>
+        <Text style={styles.username}>{username || ''}</Text>
         <Text style={styles.onlineStatus}>
-          {t('onlineStatus', { context: onlineStatus })}
+          {t('onlineStatus', { context: 'online' })}
         </Text>
       </View>
     </View>

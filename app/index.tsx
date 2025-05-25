@@ -1,8 +1,9 @@
 import { Link, Redirect, Tabs } from 'expo-router'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
+import * as SecureStore from 'expo-secure-store'
 
 export default function Home() {
-  const isAuthorized = true
+  const isAuthorized = SecureStore.getItem('authorization')
 
   if (!isAuthorized) return <Redirect href={'/welcome'} />
   if (isAuthorized) return <Redirect href={'/dialogs'} />

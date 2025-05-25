@@ -1,4 +1,4 @@
-import { $theme } from '@/src/theme'
+import { $theme } from '@/src/application/theme'
 import { StyleSheet } from 'react-native'
 
 const outlinedStyles = StyleSheet.create({
@@ -17,6 +17,15 @@ const filledStyles = StyleSheet.create({
   },
   title: {
     color: $theme.getState().common.white,
+  },
+})
+
+const disabledStyled = StyleSheet.create({
+  buttonContainer: {
+    backgroundColor: $theme.getState().common.neutral[20],
+  },
+  title: {
+    color: $theme.getState().common.neutral[30],
   },
 })
 
@@ -47,8 +56,10 @@ const mediumSizeStyles = StyleSheet.create({
 const defaultStyles = StyleSheet.create({
   buttonContainer: {
     justifyContent: 'center',
+    flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 8,
+    gap: 4,
   },
   title: {
     fontSize: 16,
@@ -66,6 +77,7 @@ export const getButtonStyles = (
   size: 'small' | 'medium',
   variant: 'outlined' | 'filled' | 'text',
   fullWidth?: boolean,
+  disabled?: boolean,
 ) => {
   let containerStyles = defaultStyles.buttonContainer
   let titleStyles = defaultStyles.title
@@ -121,6 +133,17 @@ export const getButtonStyles = (
     containerStyles = {
       ...containerStyles,
       ...fullWidthStyles.buttonContainer,
+    }
+  }
+
+  if (disabled) {
+    containerStyles = {
+      ...containerStyles,
+      ...disabledStyled.buttonContainer,
+    }
+    titleStyles = {
+      ...titleStyles,
+      ...disabledStyled.title,
     }
   }
 

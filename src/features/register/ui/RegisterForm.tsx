@@ -6,6 +6,7 @@ import RepeatedPasswordTextField from './RepeatedPasswordTextField'
 import { Button } from '@/src/shared/ui'
 import { useRouter } from 'expo-router'
 import { useTranslation } from 'react-i18next'
+import { submitSignUpForm } from '../model/model'
 
 const styles = StyleSheet.create({
   container: {
@@ -31,7 +32,7 @@ const RegisterForm = () => {
       <View style={styles.buttons}>
         <Button
           fullWidth
-          onClick={() => {}}
+          onClick={submitSignUpForm}
           title={t('signUp')}
         />
         <Button

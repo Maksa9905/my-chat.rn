@@ -24,6 +24,10 @@
 
   "enterMessage": "Введите сообщение",
 
+  "error": "Ошибка",
+  "loginError_401": "Неверный логин или пароль",
+  "signUpError_500": "Ошибка при регистрации",
+
   "formatDateMonth": "Месяц",
   "formatDateMonth_0": "января",
   "formatDateMonth_1": "февраля",

@@ -1,5 +1,5 @@
 import { NotReadIcon, ReadIcon } from '@/src/shared/icons'
-import { $theme } from '@/src/theme'
+import { $theme } from '@/src/application/theme'
 import { useMemo } from 'react'
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import { MAX_MESSAGE_LENGTH } from '../../lib/constants'
